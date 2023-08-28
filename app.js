@@ -6,16 +6,19 @@ const cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 
+const portNumber = process.env.PORT || 3000;
+const frontendURL = process.env.FRONTEND_URL || "http://localhost:5173";
+
 app.use(express.json());
 // Enable CORS for all routes
 app.use(cors({
-    origin: 'http://localhost:5173' // Replace with your SvelteKit frontend URL
+    origin: frontendURL // Replace with your SvelteKit frontend URL
   }));
 
 // Create Socket.io instance with CORS options
 const io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173", // Your SvelteKit frontend URL
+      origin: frontendURL, // Your SvelteKit frontend URL
       methods: ["GET", "POST"]
     }
   });
@@ -49,7 +52,7 @@ io.on('connection', (socket) => {
     console.log('Client connected');
 });
 
-const port = 3000;
+const port = portNumber;
 server.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });

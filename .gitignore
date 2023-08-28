@@ -1,0 +1,80 @@
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.env
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+*.swp
+*.swo
+*.swn
+*.idea/
+*.project
+*.cproject
+*.settings/
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Temporary files
+*.bak
+*.tmp
+
+# Node.js packages
+node_modules/
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+
+# Other
+*.suo
+*.user
+*.userosscache
+*.dbmdl
+*.dbproj.schemaview
+*.pfx
+*.publishsettings
+
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# Windows image file caches
+icon-cache.db
+*.db-shm
+*.db-wal
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows image file caches
+icon-cache.db
+*.db
