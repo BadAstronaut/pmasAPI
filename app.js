@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 
 const portNumber = process.env.PORT || 3000;
-const frontendURL = process.env.FRONTEND_URL || "http://localhost:5173";
+const frontendURL = process.env.FRONTEND_URL || "https://main--strong-cajeta-eda609.netlify.app";
 
 app.use(express.json());
 // Enable CORS for all routes
