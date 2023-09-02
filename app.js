@@ -61,12 +61,11 @@ app.post('/api/update', (req, res) => {
     }
 
     // If no userID is provided, or if the socket doesn't exist, emit to all connected clients
-    io.emit('dataUpdated', data);
-
-    res.json({
-      status: 'success',
-      message: 'Update broadcasted to all connected clients.',
-      data: { speckleUrl, userId }
+    console.error('Error No UserID Session Register');
+    res.status(500).json({
+      status: 'error',
+      message: 'No userId connection have been stablish with the pass userId.',
+      errors: [ error.message ]
     });
 
   } catch (error) {
