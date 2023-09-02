@@ -62,10 +62,9 @@ app.post('/api/update', (req, res) => {
 
     // If no userID is provided, or if the socket doesn't exist, emit to all connected clients
     console.error('Error No UserID Session Register');
-    res.status(500).json({
+    res.status(404).json({
       status: 'error',
       message: 'No userId connection have been stablish with the pass userId.',
-      errors: [ error.message ]
     });
 
   } catch (error) {
