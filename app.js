@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 const portNumber = process.env.PORT || 3000;
 //production fronend url 
-const frontendURL = process.env.FRONTEND_URL || "https://main--strong-cajeta-eda609.netlify.app";
+const frontendURL = process.env.FRONTEND_URL || "https://strong-cajeta-eda609.netlify.app";
 //development frontend url
 //const frontendURL = process.env.FRONTEND_URL || "http://localhost:5173";
 app.use(express.json());
